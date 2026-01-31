@@ -161,31 +161,7 @@ fun AddBookScreen(
                     color = MaterialTheme.colorScheme.primary
                 )
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                    shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)
-                ) {
-                    Column(modifier = Modifier.padding(8.dp)) {
-                        if (authors.isEmpty()) {
-                            Text(
-                                "Belum ada pengarang.",
-                                modifier = Modifier.padding(16.dp),
-                                style = MaterialTheme.typography.bodySmall
-                            )
-                        }
-                        authors.forEach { author ->
-                            Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                                Checkbox(
-                                    checked = selectedAuthors.contains(author),
-                                    onCheckedChange = { checked ->
-                                        if (checked) selectedAuthors.add(author) else selectedAuthors.remove(
-                                            author
-                                        )
-                                    }
-                                )
-                                Text(author.name, style = MaterialTheme.typography.bodyMedium)
-                            }
-                        }
-                    }
+                    c
                 }
 
             }

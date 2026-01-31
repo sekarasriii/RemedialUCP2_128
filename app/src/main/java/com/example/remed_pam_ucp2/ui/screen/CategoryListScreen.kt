@@ -49,13 +49,7 @@ fun CategoryListScreen(
         }
     ) { padding ->
         LazyColumn(
-            modifier = Modifier.padding(padding).fillMaxSize().padding(horizontal = 16.dp)
-        ) {
-            val rootCategories = categories.filter { it.parentId == null }
-            items(rootCategories) { category ->
-                CategoryItemRecursive(category, categories, depth = 0, viewModel = viewModel)
-            }
-        }
+
     }
 }
 
